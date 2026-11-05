@@ -2,13 +2,11 @@ import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Alert } from 'react-native';
 
-import CadastroScreen from '../CadastroScreen';
-import { cadastrarUsuarioFirestore } from '../../firebaseDb';
-
-
+import CadastroScreen from '../src/CadastroScreen';
+import { cadastrarUsuarioFirestore } from '../firebaseDb';
 
 // 1. Mock do serviço do Firebase
-jest.mock('../../firebaseDb', () => ({
+jest.mock('../firebaseDb', () => ({
   cadastrarUsuarioFirestore: jest.fn(),
 }));
 
